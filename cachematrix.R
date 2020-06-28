@@ -95,6 +95,7 @@ my_matrix$get()
 ## [2,]    2    6   10   14
 ## [3,]    3    7   11   15
 ## [4,]    4    8   12   16
+
 ##If we run the cacheSolve function for this new matrix, we get an error
 cacheSolve(my_matrix)
  ## Error in solve.default(data, ...) : 
