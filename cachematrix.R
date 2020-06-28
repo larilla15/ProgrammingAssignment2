@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
         x$setInv(matrix_inv)
         matrix_inv
 }
-##Now we test the two functions. Let's create the object my_matrix which contains the function makeCacheMatrix and a matrix (1:4,2,2)
+##Now we test the two functions. Let's create the object my_matrix which contains the function makeCacheMatrix and a matrix (numbers from 1 to 4, 2 rows, 2 columns)
 my_matrix<-makeCacheMatrix(matrix(1:4,2,2))
 ## with the argument my_matrix$get() we print the matrix
 my_matrix$get()
@@ -54,6 +54,21 @@ my_matrix$getInv()
  ##    [,1] [,2]
 ##[1,]   -2  1.5
 ##[2,]    1 -0.5  The inverse matrix is the same as the previous one
-
-
+## Wow we can set a different matrix (numbers from 4 to 7, 2 rows, 2 columns)
+my_matrix$set(matrix(c(4:7), 2, 2))
+> my_matrix$get()
+   ##  [,1] [,2]
+##[1,]    4    6
+##[2,]    5    7 This is our new matrix
+> my_matrix$getInv()
+NULL 
+## As before we have to run the cacheSolve function to get the inverse matrix
+> cacheSolve(my_matrix)
+  ##   [,1] [,2]
+##[1,] -3.5    3
+##[2,]  2.5   -2
+my_matrix$getInv()
+##[,1] [,2]
+##[1,] -3.5    3
+##[2,]  2.5   -2
         
