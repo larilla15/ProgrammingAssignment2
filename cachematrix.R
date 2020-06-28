@@ -96,7 +96,7 @@ my_matrix$get()
 ## [3,]    3    7   11   15
 ## [4,]    4    8   12   16
 ##If we run the cacheSolve function for this new matrix, we get an error
-## cacheSolve(my_matrix)
+cacheSolve(my_matrix)
  ## Error in solve.default(data, ...) : 
   ## Lapack routine dgesv: system is exactly singular: U[3,3] = 0 
 ## The new matrix is singular, therefore we cannot compute the inverse matrix.
