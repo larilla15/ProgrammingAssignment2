@@ -3,7 +3,7 @@
 ## 1) to create a special object that can cache a matrix and its inverse.
 ## 2) to compute the inverse of the "matrix" in case the inverse matrix has not already been created 
 
-## In first function we create an object makeCacheMatrix which stores a matrix and its inverse.
+## In first function we create a function "makeCacheMatrix" which stores a matrix and its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
 matrix_inv <- NULL
@@ -22,8 +22,8 @@ matrix_inv <- NULL
 }
 
 
-## In the second funtion cacheSolve we create a function which firstly checks if the inverse function has already been created.
-##If not, it computes and returns the inverse matrix anew
+## In the second function "cacheSolve" we create a function which firstly checks if the inverse function has already been created.
+##If not, it computes and returns the inverse matrix.
 
 cacheSolve <- function(x, ...) {
          matrix_inv <- x$getInv()
@@ -49,7 +49,7 @@ NULL  #the result is NULL.  We have to compute the inverse with the second funct
 cacheSolve(my_matrix)
  ##   [,1] [,2]
 ##[1,]   -2  1.5
-##[2,]    1 -0.5  This is the inverse matrix. If we want we can check by using getInv
+##[2,]    1 -0.5  This is the inverse matrix. If we want, we can check by using getInv
 my_matrix$getInv()
  ##    [,1] [,2]
 ##[1,]   -2  1.5
@@ -60,10 +60,10 @@ my_matrix$set(matrix(c(4:7), 2, 2))
    ##  [,1] [,2]
 ##[1,]    4    6
 ##[2,]    5    7 This is our new matrix
-> my_matrix$getInv()
+my_matrix$getInv()
 NULL 
 ## As before we have to run the cacheSolve function to get the inverse matrix
-> cacheSolve(my_matrix)
+cacheSolve(my_matrix)
   ##   [,1] [,2]
 ##[1,] -3.5    3
 ##[2,]  2.5   -2
