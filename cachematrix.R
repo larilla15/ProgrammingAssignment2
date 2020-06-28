@@ -50,7 +50,8 @@ NULL  #the result is NULL.  First we have to compute the inverse with the second
 cacheSolve(my_matrix)
  ##   [,1] [,2]
 ##[1,]   -2  1.5
-##[2,]    1 -0.5  This is the inverse matrix. If we want, now we can use getInv and check the matrix
+##[2,]    1 -0.5 
+##This is the inverse matrix. If we want, now we can use getInv and check the matrix
 my_matrix$getInv()
  ##    [,1] [,2]
 ##[1,]   -2  1.5
@@ -75,13 +76,13 @@ my_matrix$getInv()
 ##[1,] -3.5    3
 ##[2,]  2.5   -2
 ## Now we set another matrix: number 1 to 16, 4 rows, 4 columns)
-m1$set(matrix(1:16,4,4))
-m1$get()
-     [,1] [,2] [,3] [,4]
-[1,]    1    5    9   13
-[2,]    2    6   10   14
-[3,]    3    7   11   15
-[4,]    4    8   12   16
+my_matrix$set(matrix(1:16,4,4))
+my_matrix$get()
+  ##   [,1] [,2] [,3] [,4]
+## [1,]    1    5    9   13
+## [2,]    2    6   10   14
+## [3,]    3    7   11   15
+## [4,]    4    8   12   16
 ##If we run the cacheSolve function for this new matrix, we get an error
 cacheSolve(my_matrix)
  Error in solve.default(data, ...) : 
