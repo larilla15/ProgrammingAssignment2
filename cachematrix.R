@@ -4,7 +4,7 @@
 ## 2) to compute the inverse of the "matrix" in case the inverse matrix has not already been created 
 
 ## In first function we create a function "makeCacheMatrix" which stores a matrix and its inverse.
-## It contains variables x and matrix_ and 4 functions to set and get the matrix and to set and get the inverse.
+## It contains variables "x" and "matrix_inv", and 4 functions to set and get the matrix and to set and get the inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
 matrix_inv <- NULL
