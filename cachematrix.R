@@ -56,7 +56,7 @@ my_matrix$getInv()
 ##[2,]    1 -0.5  The inverse matrix is the same as the previous one
 ## Wow we can set a different matrix (numbers from 4 to 7, 2 rows, 2 columns)
 my_matrix$set(matrix(c(4:7), 2, 2))
-> my_matrix$get()
+my_matrix$get()
    ##  [,1] [,2]
 ##[1,]    4    6
 ##[2,]    5    7 This is our new matrix
