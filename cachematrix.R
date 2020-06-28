@@ -71,4 +71,16 @@ my_matrix$getInv()
 ##[,1] [,2]
 ##[1,] -3.5    3
 ##[2,]  2.5   -2
-        
+## Now wwe set another matrix: number 1 to 16, 4 rows, 4 columns)
+m1$set(matrix(1:16,4,4))
+m1$get()
+     [,1] [,2] [,3] [,4]
+[1,]    1    5    9   13
+[2,]    2    6   10   14
+[3,]    3    7   11   15
+[4,]    4    8   12   16
+##if we run the cacheSolve function for  this new function we get an errror
+cacheSolve(my_matrix)
+ Error in solve.default(data, ...) : 
+  Lapack routine dgesv: system is exactly singular: U[3,3] = 0 
+## The new matrix is singular, therefore we cannot compute the inverse matrix.
